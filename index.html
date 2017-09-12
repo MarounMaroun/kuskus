@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Straoeat</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<section class="preloader">
+	<div class="sk-spinner"></div>
+</section>
+
+
+<!-- home -->
+<section id="home">
+	<div class="container">
+		<h1 id="day"></h1>
+		<h2 id ="food"></h2>
+	</div>		
+</section>
+
+
+
+<!-- JS -->	
+<script>
+var d = new Date();
+day = [
+	{"day": "Sunday", "food": "Sandwiches", "image": "url(images/sandwich.jpg)"},
+    {"day": "Monday", "food": "Kuskus", "image": "url(images/kuskus.jpg)"},
+    {"day": "Tuesday", "food": "Pizzaaaaaaaaa", "image": "url(images/pizza.jpg)"}, 
+    {"day": "Wednesday", "food": "Sandwiches", "image": "url(images/sandwich.jpg)"}, 
+    {"day": "Thursday", "food": "Not sure...", "image": "url(images/surprise.jpg)"}, 
+    {"day": "Friday", "food": "No food for you today", "image": "url(images/nofood.jpg)"}, 
+    {"day": "Saturday", "food": "No food for you today", "image": "url(images/nofood.jpg)"}
+][d.getDay()];
+
+document.getElementById("day").innerHTML = day["day"];
+document.getElementById("food").innerHTML = day["food"];
+document.getElementById("home").style.backgroundImage=day["image"];
+
+</script>
+<script src="js/jquery.js"></script>
+<script src="js/custom.js"></script>
+
+</body>
+</html>
